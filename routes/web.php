@@ -12,6 +12,13 @@ use App\Http\Controllers\frontend\SearchController;
 use App\Http\Controllers\frontend\ServiceController;
 use App\Http\Controllers\frontend\TeamController;
 use App\Http\Controllers\frontend\TestimonialController;
+use App\Http\Controllers\FrontendAboutController;
+use App\Http\Controllers\FrontendAmenitiesController;
+use App\Http\Controllers\FrontendBookingController;
+use App\Http\Controllers\FrontendContactController;
+use App\Http\Controllers\FrontendHomeController;
+use App\Http\Controllers\FrontendLoginController;
+use App\Http\Controllers\FrontendRoomController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,55 +36,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [FrontendHomeController::class, 'index'])->name('dashboard');
 });
 
 
 // Frontend STATTS //
 ##########################################################################################
-
-
-// Home Route
-Route::get('/frontendpage', [ HomeController::class, 'index'])->name('frontend.index');
-
-// About Route
-Route::get('/frontendpage', [ AboutController::class, 'about'])->name('frontend.about');
-
-// Contact Route
-Route::get('/frontendpage', [ ContactController::class, 'contact'])->name('frontend.contact');
-
-// Appointment Route
-Route::get('/frontendpage', [ AppointmentController::class, 'appointment'])->name('frontend.appointment');
-
-// Blog Route
-Route::get('/frontendpage', [ BlogController::class, 'blog'])->name('frontend.blog');
-
-// Detail Route
-Route::get('/frontendpage', [ DetailController::class, 'detail'])->name('frontend.detail');
-
-// Price Route
-Route::get('/frontendpage', [ PriceController::class, 'price'])->name('frontend.price');
-
-// Search Route
-Route::get('/frontendpage', [ SearchController::class, 'search'])->name('frontend.search');
-
-// Service Route
-Route::get('/frontendpage', [ ServiceController::class, 'service'])->name('frontend.service');
-
-// Team Route
-Route::get('/frontendpage', [ TeamController::class, 'team'])->name('frontend.team');
-
-// Testimonial Route
-Route::get('/frontendpage', [ TestimonialController::class, 'testimonial'])->name('frontend.testimonial');
-
-
 
 
 
@@ -92,8 +62,8 @@ Route::get('/frontendpage', [ TestimonialController::class, 'testimonial'])->nam
 // ADMIN SITE STATTS //
 ##########################################################################################
 
+// Admin Dashboard
 
-Route::get('/adminpage', [AdminContoller::class, 'index']);
 
 
 // ADMIN SITE ENDS //

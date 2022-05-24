@@ -17,7 +17,6 @@
         <!-- Vendor CSS File -->
         <link href="{{ asset('frontend/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('frontend/assets/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('frontend/assets/vendor/animate/animate.min.css') }}" rel="stylesheet">
         <link href="{{ asset('frontend/assets/vendor/slick/slick.css') }}" rel="stylesheet">
         <link href="{{ asset('frontend/assets/vendor/slick/slick-theme.css') }}" rel="stylesheet">
         <link href="{{ asset('frontend/assets/vendor/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
@@ -35,9 +34,9 @@
             <div class="mobile-menu-btn"><i class="fa fa-bars"></i></div>
             <nav class="main-menu top-menu">
                 <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="room.html">Rooms</a></li>
+                    <li class="active"><a href="room.html">Rooms</a></li>
                     <li><a href="amenities.html">Amenities</a></li>
                     <li><a href="booking.html">Booking</a></li>
                     <li><a href="login.html">Login</a></li>
@@ -47,49 +46,8 @@
         </header>
         <!-- Header Section End -->
         
-        <!-- Header Slider Start -->
-        <div id="headerSlider" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#headerSlider" data-slide-to="0" class="active"></li>
-                <li data-target="#headerSlider" data-slide-to="1"></li>
-                <li data-target="#headerSlider" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{ asset('frontend/assets/img/slider/header-slider-1.jpg') }}" alt="Royal Hotel">
-                    <div class="carousel-caption">
-                        <h1 class="animated fadeInRight">LUXURY HOTELS AT NIGHT</h1>
-                    </div>
-                </div>
-                
-                <div class="carousel-item">
-                    <img src="{{ asset('frontend/assets/img/slider/header-slider-2.jpg') }}" alt="Royal Hotel">
-                    <div class="carousel-caption">
-                        <h1 class="animated fadeInLeft">ATLANTIS, DUBAI</h1>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <img src="{{ asset('frontend/assets/img/slider/header-slider-3.jpg') }}" alt="Royal Hotel">
-                    <div class="carousel-caption">
-                        <h1 class="animated fadeInRight">BEDROOM OF A HOTEL</h1>
-                    </div>
-                </div>
-            </div>
-
-            <a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-        <!-- Header Slider End -->
-        
         <!-- Search Section Start -->
-        <div id="search">
+        <div id="search" style="background: #f2f2f2;">
             <div class="container">
                 <div class="form-row">
                     <div class="control-group col-md-3">
@@ -157,71 +115,6 @@
             </div>
         </div>
         <!-- Search Section End -->
-        
-        <!-- Welcome Section Start -->
-        <div id="welcome">
-            <div class="container">
-                <h3>Welcome to Royal Hotel</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida sollicitudin turpis id posuere. Fusce nec rhoncus nibh. Fusce arcu libero, euismod eget commodo at, venenatis a nisi. Sed faucibus metus sed leo vulputate blandit.</p>
-                <a href="#">Book Now</a>
-            </div>
-        </div>
-        <!-- Welcome Section End -->
-        
-        <!-- Amenities Section Start -->
-        <div id="amenities" class="home-amenities">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Amenities & Services</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis, enim at venenatis tincidunt.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 col-sm-6 icons">
-                        <i class="icon icon-2"></i>
-                        <h3>Air Conditioner</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="col-md-3 col-sm-6 icons">
-                        <i class="icon icon-3"></i>
-                        <h3>Bathtub</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="col-md-3 col-sm-6 icons">
-                        <i class="icon icon-4"></i>
-                        <h3>Shower</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="col-md-3 col-sm-6 icons">
-                        <i class="icon icon-6"></i>
-                        <h3>Television</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="col-md-3 col-sm-6 icons">
-                        <i class="icon icon-7"></i>
-                        <h3>WiFi</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="col-md-3 col-sm-6 icons">
-                        <i class="icon icon-8"></i>
-                        <h3>Telephone</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="col-md-3 col-sm-6 icons">
-                        <i class="icon icon-9"></i>
-                        <h3>Mini Bar</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="col-md-3 col-sm-6 icons">
-                        <i class="icon icon-10"></i>
-                        <h3>Kitchen</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Amenities Section Start -->
         
         <!-- Room Section Start -->
         <div id="rooms">
@@ -495,10 +388,10 @@
                                     <div><img src="{{ asset('frontend/assets/img/room-slider/room-6.jpg') }}"></div>
                                 </div>
                                 <div class="port-slider-nav">
-                                    <div><img src="{{ asset('frontend/assets/img/room-slider/room-1.jpg') }}"></div>
+                                    <div><img src="{{ asset('frontend/assetsimg/room-slider/room-1.jpg/') }}"></div>
                                     <div><img src="{{ asset('frontend/assets/img/room-slider/room-2.jpg') }}"></div>
                                     <div><img src="{{ asset('frontend/assets/img/room-slider/room-3.jpg') }}"></div>
-                                    <div><img src="{{ asset('frontend/assets/img/room-slider/room-4.jpg"') }}></div>
+                                    <div><img src="{{ asset('frontend/assets/img/room-slider/room-4.jpg') }}"></div>
                                     <div><img src="{{ asset('frontend/assets/img/room-slider/room-5.jpg') }}"></div>
                                     <div><img src="{{ asset('frontend/assets/img/room-slider/room-6.jpg') }}"></div>
                                 </div>
@@ -518,111 +411,6 @@
             </div>
         </div>
         <!-- Modal for Room Section End -->
-        
-        <!-- Subscribe Section Start -->
-        <div id="subscribe">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Subscribe for Special Offer</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis, enim at venenatis tincidunt.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="subscribe-form">
-                            <form>
-                                <input type="email" required="required" placeholder="Enter your email here" />
-                                <button>submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Subscribe Section End -->
-        
-        <!-- Booking Section Start -->
-        <div id="booking">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Room Booking</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis, enim at venenatis tincidunt.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="booking-form">
-                            <div id="success"></div>
-                            <form name="sentMessage" id="bookingForm" novalidate="novalidate">
-                                <div class="form-row">
-                                    <div class="control-group col-sm-6">
-                                        <label>First Name</label>
-                                        <input type="text" class="form-control" id="fname" placeholder="E.g. John" required="required" data-validation-required-message="Please enter first name" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group col-sm-6">
-                                        <label>Last Name</label>
-                                        <input type="text" class="form-control" id="lname" placeholder="E.g. Sina" required="required" data-validation-required-message="Please enter last name" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="control-group col-sm-6">
-                                        <label>Mobile</label>
-                                        <input type="text" class="form-control" id="mobile" placeholder="E.g. +1 234 567 8900" required="required" data-validation-required-message="Please enter your mobile number" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group col-sm-6">
-                                        <label>Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="E.g. email@example.com" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="control-group col-sm-6">
-                                        <label>Check-In</label>
-                                        <input type="text" class="form-control datetimepicker-input" id="date-1" data-toggle="datetimepicker" data-target="#date-1" placeholder="E.g. MM/DD/YYYY" required="required" data-validation-required-message="Please enter date"/>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group col-sm-6">
-                                        <label>Check-Out</label>
-                                        <input type="text" class="form-control datetimepicker-input" id="date-2" data-toggle="datetimepicker" data-target="#date-2" placeholder="E.g. MM/DD/YYYY" required="required" data-validation-required-message="Please enter date"/>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label>Special Request</label>
-                                    <input type="text" class="form-control" id="request" placeholder="E.g. Special Request" required="required" data-validation-required-message="Please enter your special request" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="button"><button type="submit" id="bookingButton">Book Now</button></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Booking Section End -->
-        
-        <!-- Call Section Start -->
-        <div id="call-us">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Click Below to Call Us</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis, enim at venenatis tincidunt.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <a href="tel:+123456789">+1 234 567 89</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Call Section End -->
         
         <!-- Footer Section Start -->
         <div id="footer">
@@ -647,7 +435,7 @@
         <!-- Footer Section End -->
         
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-        
+
         <!-- Vendor JavaScript File -->
         <script src="{{ asset('frontend/assets/vendor/jquery/jquery.min.js') }}"></script>
         <script src="{{ asset('frontend/assets/vendor/jquery/jquery-migrate.min.js') }}"></script>

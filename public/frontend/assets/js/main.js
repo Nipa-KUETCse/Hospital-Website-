@@ -1,32 +1,15 @@
 (function ($) {
     "use strict";
     
-    // Dropdown on mouse hover
-    $(document).ready(function () {
-        function toggleNavbarMethod() {
-            if ($(window).width() > 992) {
-                $('.navbar .dropdown').on('mouseover', function () {
-                    $('.dropdown-toggle', this).trigger('click');
-                }).on('mouseout', function () {
-                    $('.dropdown-toggle', this).trigger('click').blur();
-                });
-            } else {
-                $('.navbar .dropdown').off('mouseover').off('mouseout');
-            }
-        }
-        toggleNavbarMethod();
-        $(window).resize(toggleNavbarMethod);
-    });
-
-
-    // Date and time picker
-    $('.date').datetimepicker({
-        format: 'L'
-    });
-    $('.time').datetimepicker({
-        format: 'LT'
-    });
+    // Initiate the wowjs animation library
+    new WOW().init();
     
+    // Initiate menu
+    $('#header').after('<div class="mobile-menu d-xl-none">');
+    $('.top-menu').clone().appendTo('.mobile-menu');
+    $('.mobile-menu-btn').click(function () {
+        $('.mobile-menu').stop().slideToggle();
+    });
     
     // Back to top button
     $(window).scroll(function () {
@@ -40,65 +23,46 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
-
-
-    // Price carousel
-    $(".price-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        margin: 45,
-        dots: false,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:1
-            },
-            992:{
-                items:2
-            },
-            1200:{
-                items:3
-            }
-        }
+    
+    // Date and time picker
+    $('#date-1, #date-2, #date-3, #date-4').datetimepicker({
+        format: 'L'
     });
-
-
-    // Team carousel
-    $(".team-carousel, .related-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        margin: 45,
-        dots: false,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:1
-            },
-            992:{
-                items:2
-            }
-        }
-    });
-
-
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        items: 1,
-        dots: true,
-        loop: true,
+    $('#time-1, #time-2').datetimepicker({
+        format: 'LT'
     });
     
+    //Portfolio modal slider
+    $('.port-slider').delay(10000);
+    $('.port-slider').slick({
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.port-slider-nav'
+    });
+    $('.port-slider-nav').slick({
+        autoplay: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.port-slider',
+        arrows: false,
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true
+    });
+    
+    $('#popover-content-download').hide();
+    $("[data-toggle=popover]").each(function (e) {
+        $(this).popover({
+            html: true,
+            content: function () {
+                var id = $(this).attr('id')
+                return $('#popover-content-' + id).html();
+            }
+        });
+
+    });
 })(jQuery);
 
